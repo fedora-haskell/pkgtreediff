@@ -8,7 +8,7 @@
 %global debug_package %{nil}
 
 Name:           pkgtreediff
-Version:        0.1
+Version:        0.2
 Release:        1%{?dist}
 Summary:        Package tree diff tool
 
@@ -83,6 +83,9 @@ Tool for comparing RPM package files in OS dist trees.
 
 
 %changelog
+* Thu Jun  6 2019 fedora-toolbox <petersen@redhat.com> - 0.2-1
+- add summary and --ignore-arch
+
 * Tue Jun  4 2019 Jens Petersen <petersen@redhat.com> - 0.1-1
 - update to 0.1
 - added --ignore-version option
