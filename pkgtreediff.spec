@@ -8,7 +8,7 @@
 %global debug_package %{nil}
 
 Name:           pkgtreediff
-Version:        0.2.1
+Version:        0.3
 Release:        1%{?dist}
 Summary:        Package tree diff tool
 
@@ -22,6 +22,7 @@ Source0:        https://hackage.haskell.org/package/%{name}-%{version}/%{name}-%
 BuildRequires:  ghc-Cabal-devel
 BuildRequires:  ghc-rpm-macros
 %if %{defined fedora}
+BuildRequires:  ghc-Glob-devel
 BuildRequires:  ghc-async-devel
 BuildRequires:  ghc-directory-devel
 BuildRequires:  ghc-filepath-devel
@@ -83,6 +84,9 @@ Tool for comparing RPM package files in OS dist trees.
 
 
 %changelog
+* Fri Jun  7 2019 fedora-toolbox <petersen@redhat.com> - 0.3-1
+- add --pattern for href filename globbing
+
 * Thu Jun  6 2019 fedora-toolbox <petersen@redhat.com> - 0.2.1-1
 - improve recursion and add --ignore-arch
 
