@@ -10,7 +10,7 @@
 %global debug_package %{nil}
 
 Name:           pkgtreediff
-Version:        0.3
+Version:        0.4
 Release:        1%{?dist}
 Summary:        Package tree diff tool
 
@@ -29,6 +29,8 @@ BuildRequires:  ghc-async-devel
 BuildRequires:  ghc-base-devel
 BuildRequires:  ghc-directory-devel
 BuildRequires:  ghc-filepath-devel
+BuildRequires:  ghc-http-client-devel
+BuildRequires:  ghc-http-client-tls-devel
 BuildRequires:  ghc-http-directory-devel
 BuildRequires:  ghc-simple-cmd-devel
 BuildRequires:  ghc-simple-cmd-args-devel
@@ -53,7 +55,7 @@ BuildRequires:  zlib-devel
 BuildRequires:  cabal-install > 1.18
 
 %description
-Tool for comparing RPM package files in OS dist trees.
+Tool for comparing RPM packages and versions in OS dist trees or instances.
 
 
 %prep
@@ -87,6 +89,12 @@ Tool for comparing RPM package files in OS dist trees.
 
 
 %changelog
+* Fri Mar 13 2020 Jens Petersen <petersen@redhat.com> - 0.4-1
+- command output and file lists
+- rpm version ordering
+- http --timeout option
+- https://hackage.haskell.org/package/pkgtreediff-0.4/changelog
+
 * Fri Jun  7 2019 fedora-toolbox <petersen@redhat.com> - 0.3-1
 - add --pattern for href filename globbing
 
